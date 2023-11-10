@@ -1,1 +1,1 @@
-"# CogniMind" 
+# CogniMind
