@@ -14,10 +14,18 @@ import Upload from "./components/Upload/Upload";
 import Forgot from "./components/Auth/Forgot";
 import Reset from "./components/Auth/Reset";
 import Report from "./components/Report/Report";
+import { useEffect } from "react";
 
 
 
 function App() {
+
+
+  useEffect(() => {
+    console.log(process.env.REACT_APP_API_URL);
+  }, [])
+
+
   return (
     <Router>
       <div className="App">

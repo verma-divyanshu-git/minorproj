@@ -7,6 +7,13 @@ const defaultState = {
   password: "",
 };
 
+const handleSubmit = (event) => {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Rest of the form submission logic
+};
+
+
 const Reset = () => {
   const [formstate, dispatchState] = useReducer(formreducer, defaultState);
   const [errors, dispatchErrors] = useReducer(formreducer, defaultState);
@@ -14,10 +21,10 @@ const Reset = () => {
   return (
     <div className="App">
       <section>
-        <div class="container active">
-          <div class="user signupBx">
-            <div class="formBx">
-              <form action="" onsubmit="return false;">
+        <div className="container active">
+          <div className="user signupBx">
+            <div className="formBx">
+              <form action="" onSubmit={handleSubmit}>
                 <h2>Reset Password</h2>
 
                 <input
@@ -61,7 +68,7 @@ const Reset = () => {
                 </button>
               </form>
             </div>
-            <div class="imgBx">
+            <div className="imgBx">
               <img
                 src="https://www.diagnosio.com/wp-content/uploads/2020/12/AI-bias.jpg"
                 alt=""

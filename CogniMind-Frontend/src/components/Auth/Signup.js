@@ -10,6 +10,14 @@ const defaultState = {
   password: "",
 };
 
+const handleSubmit = (event) => {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Rest of the form submission logic
+};
+
+
+
 const Signup = () => {
   const [formstate, dispatchState] = useReducer(formreducer, defaultState);
   const [errors, dispatchErrors] = useReducer(formreducer, defaultState);
@@ -17,14 +25,15 @@ const Signup = () => {
   return (
     <div className="App">
       <section>
-        <div class="container active">
-          <div class="user signupBx">
-            <div class="formBx">
-              <form action="" onsubmit="return false;">
+        <div className="container active">
+          <div className="user signupBx">
+            <div className="formBx">
+              <form action="" onSubmit={handleSubmit}>
                 <h2>Create an account</h2>
                 <select
                   id="role"
                   name="role"
+                  value={formstate.role}
                   placeholder="Select your Role"
                   onChange={(e) =>
                     dispatchState({
@@ -39,7 +48,7 @@ const Signup = () => {
                     });
                   }}
                 >
-                  <option value="" disabled selected>
+                  <option value="" disabled>
                     Select your Role
                   </option>
                   <option value="Doctor">Doctor</option>
@@ -104,12 +113,12 @@ const Signup = () => {
                 <button type="submit" className="btn btn-primary">
                   Sign Up
                 </button>
-                <p class="signup">
-                  Already have an account ?<a href="/login">Login.</a>
+                <p className="signup">
+                  Already have an account ?<a href="/login"> Login.</a>
                 </p>
               </form>
             </div>
-            <div class="imgBx">
+            <div className="imgBx">
               <img
                 src="https://www.diagnosio.com/wp-content/uploads/2020/12/AI-bias.jpg"
                 alt=""

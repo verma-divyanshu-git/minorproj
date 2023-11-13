@@ -9,23 +9,48 @@ const defaultState = {
   password: "",
 };
 
+
+
 function Login() {
   const [formstate, dispatchState] = useReducer(formreducer, defaultState);
   const [errors, dispatchErrors] = useReducer(formreducer, defaultState);
 
+  const handleSubmit = async (event) => {
+  event.preventDefault();
+  try {
+    const response = await fetch('http://127.0.0.1:8000/login/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formstate), // Sending the form data to the backend
+    });
+
+    if (response.ok) {
+      // Handle successful login response (maybe set tokens, etc.)
+      console.log('Login successful!');
+    } else {
+      // Handle login error
+      console.log('Login failed.');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+  }
+  };
+  
   return (
     <div className="App">
       <section>
-        <div class="container">
-          <div class="user signinBx">
-            <div class="imgBx">
+        <div className="container">
+          <div className="user signinBx">
+            <div className="imgBx">
               <img
                 src="https://www.statnews.com/wp-content/uploads/2020/01/AdobeStock_215322148-645x645.jpg"
                 alt=""
               />
             </div>
-            <div class="formBx">
-              <form action="" onsubmit="return false;" autocomplete="on">
+            <div className="formBx">
+              <form action="" onSubmit={handleSubmit} autoComplete="on">
                 <h2>Sign In</h2>
                 <input
                   type="text"
@@ -67,6 +92,7 @@ function Login() {
                 <select
                   id="role"
                   name="role"
+                  value={formstate.role}
                   placeholder="Select your Role"
                   onChange={(e) =>
                     dispatchState({
@@ -81,7 +107,7 @@ function Login() {
                     });
                   }}
                 >
-                  <option value="" disabled selected>
+                  <option value="" disabled>
                     Select your Role
                   </option>
                   <option value="Doctor">Doctor</option>
@@ -92,11 +118,11 @@ function Login() {
                 <button type="submit" className="btn btn-primary">
                   Log In
                 </button>
-                <p class="signup">
+                <p className="signup">
                   <a href="/forgot">Forgot Password?</a>
                 </p>
-                <p class="signup">
-                  Don't have an account ?<a href="/signup">Sign Up.</a>
+                <p className="signup">
+                  Don't have an account ?<a href="/signup"> Sign Up.</a>
                 </p>
               </form>
             </div>

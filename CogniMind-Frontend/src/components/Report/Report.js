@@ -10,7 +10,7 @@ function Report() {
   return (
     <div className="reportbox">
       <h2>Report</h2>
-      <table class="table table-bordered">
+      <table className="table table-bordered">
         <thead>
           <tr>
             <th scope="col">Model</th>

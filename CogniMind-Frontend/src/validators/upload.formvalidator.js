@@ -24,11 +24,14 @@ const generateUploadError = (formstate, name) => {
         error = "Invalid Patient ID";
       }
       break;
-    // case "file":
-    //   if (formstate[name].name.substr(-3) !== "csv") {
-    //     error = "Invalid File type";
-    //   }
-    //   break;
+    case "file":
+      if (formstate[name].name.substr(-3) !== "csv") {
+        error = "Invalid File type";
+      }
+      break;
+    default:
+      error = "Unexpected input";
+      break;
   }
   return error;
 };

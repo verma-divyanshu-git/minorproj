@@ -77,92 +77,92 @@ function Profile() {
                 </div>
 
                 <div
-                  class="modal fade"
+                  className="modal fade"
                   id="exampleModalCenter1"
-                  tabindex="-1"
+                  tabIndex="-1"
                   role="dialog"
                   aria-labelledby="exampleModalCenterTitle"
                   aria-hidden="true"
                 >
                   <div
-                    class="modal-dialog modal-dialog-centered"
+                    className="modal-dialog modal-dialog-centered"
                     role="document"
                   >
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">
+                    <div className="modal-content">
+                      <div className="modal-header">
+                        <h5 className="modal-title" id="exampleModalLongTitle">
                           Edit Details
                         </h5>
                         <button
                           type="button"
-                          class="close"
+                          className="close"
                           data-dismiss="modal"
                           aria-label="Close"
                         >
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
-                      <div class="modal-body">
+                      <div className="modal-body">
                         <form>
                           <div className="row">
                             <div className="col-sm-4 ">
-                              <label class="form-label">Name</label>
+                              <label className="form-label">Name</label>
                             </div>
                             <div className="col-sm-8">
                               <input
                                 type="name"
-                                class="form-control"
+                                className="form-control"
                                 placeholder="name"
                               />
                             </div>
                           </div>
                           <div className="row">
                             <div className="col-sm-4 ">
-                              <label class="form-label">Phone</label>
+                              <label className="form-label">Phone</label>
                             </div>
                             <div className="col-sm-8 ">
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 placeholder="phone"
                               />
                             </div>
                           </div>
                           <div className="row">
                             <div className="col-sm-4">
-                              <label class="form-label">Specialization</label>
+                              <label className="form-label">Specialization</label>
                             </div>
                             <div className="col-sm-8">
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 placeholder="Specialization"
                               />
                             </div>
                           </div>
                           <div className="row">
                             <div className="col-sm-4 ">
-                              <label class="form-label">Qualification</label>
+                              <label className="form-label">Qualification</label>
                             </div>
                             <div className="col-sm-8 ">
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 placeholder="Qualification "
                               />
                             </div>
                           </div>
                         </form>
                       </div>
-                      <div class="modal-footer">
+                      <div className="modal-footer">
                         <button
                           type="button"
-                          class="btn btn-secondary"
+                          className="btn btn-secondary"
                           data-dismiss="modal"
                         >
                           Close
                         </button>
-                        <button type="button" class="btn btn-primary">
+                        <button type="button" className="btn btn-primary">
                           Save changes
                         </button>
                       </div>
@@ -189,65 +189,65 @@ function Profile() {
                 Add Patient
               </button>
               <div
-                class="modal fade"
+                className="modal fade"
                 id="exampleModalCenter2"
-                tabindex="-1"
+                tabIndex="-1"
                 role="dialog"
                 aria-labelledby="exampleModalCenterTitle"
                 aria-hidden="true"
               >
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLongTitle">
+                <div className="modal-dialog modal-dialog-centered" role="document">
+                  <div className="modal-content">
+                    <div className="modal-header">
+                      <h5 className="modal-title" id="exampleModalLongTitle">
                         Add Patient
                       </h5>
                       <button
                         type="button"
-                        class="close"
+                        className="close"
                         data-dismiss="modal"
                         aria-label="Close"
                       >
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
-                    <div class="modal-body">
+                    <div className="modal-body">
                       <form>
                         <div className="row">
                           <div className="col-sm-4 ">
-                            <label class="form-label">Patient Name</label>
+                            <label className="form-label">Patient Name</label>
                           </div>
                           <div className="col-sm-8">
                             <input
                               type="name"
-                              class="form-control"
+                              className="form-control"
                               placeholder=" name"
                             />
                           </div>
                         </div>
                         <div className="row">
                           <div className="col-sm-4 ">
-                            <label class="form-label">Patient ID</label>
+                            <label className="form-label">Patient ID</label>
                           </div>
                           <div className="col-sm-8 ">
                             <input
                               type="text"
-                              class="form-control"
+                              className="form-control"
                               placeholder="patient ID "
                             />
                           </div>
                         </div>
                       </form>
                     </div>
-                    <div class="modal-footer">
+                    <div className="modal-footer">
                       <button
                         type="button"
-                        class="btn btn-secondary"
+                        className="btn btn-secondary"
                         data-dismiss="modal"
                       >
                         Close
                       </button>
-                      <button type="button" class="btn btn-primary">
+                      <button type="button" className="btn btn-primary">
                         Save changes
                       </button>
                     </div>
@@ -257,89 +257,89 @@ function Profile() {
             </div>
           </div>
           <div
-            class="modal fade"
+            className="modal fade"
             id="exampleModalCenter"
-            tabindex="-1"
+            tabIndex="-1"
             role="dialog"
             aria-labelledby="exampleModalCenterTitle"
             aria-hidden="true"
           >
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLongTitle">
+            <div className="modal-dialog modal-dialog-centered" role="document">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <h5 className="modal-title" id="exampleModalLongTitle">
                     Add Patient
                   </h5>
                   <button
                     type="button"
-                    class="close"
+                    className="close"
                     data-dismiss="modal"
                     aria-label="Close"
                   >
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <div class="modal-body">
+                <div className="modal-body">
                   <form>
                     <div className="row">
                       <div className="col-sm-4 ">
-                        <label class="form-label">Patient Name</label>
+                        <label className="form-label">Patient Name</label>
                       </div>
                       <div className="col-sm-8">
                         <input
                           type="name"
-                          class="form-control"
+                          className="form-control"
                           placeholder=" name"
                         />
                       </div>
                     </div>
                     <div className="row">
                       <div className="col-sm-4 ">
-                        <label class="form-label">Patient ID</label>
+                        <label className="form-label">Patient ID</label>
                       </div>
                       <div className="col-sm-8 ">
                         <input
                           type="text"
-                          class="form-control"
+                          className="form-control"
                           placeholder="patient ID "
                         />
                       </div>
                     </div>
                     <div className="row">
                       <div className="col-sm-4">
-                        <label class="form-label">Specialization</label>
+                        <label className="form-label">Specialization</label>
                       </div>
                       <div className="col-sm-8">
                         <input
                           type="text"
-                          class="form-control"
+                          className="form-control"
                           placeholder=" Specialization"
                         />
                       </div>
                     </div>
                     <div className="row">
                       <div className="col-sm-4 ">
-                        <label class="form-label">Qualification</label>
+                        <label className="form-label">Qualification</label>
                       </div>
                       <div className="col-sm-8 ">
                         <input
                           type="text"
-                          class="form-control"
+                          className="form-control"
                           placeholder="Qualification "
                         />
                       </div>
                     </div>
                   </form>
                 </div>
-                <div class="modal-footer">
+                <div className="modal-footer">
                   <button
                     type="button"
-                    class="btn btn-secondary"
+                    className="btn btn-secondary"
                     data-dismiss="modal"
                   >
                     Close
                   </button>
-                  <button type="button" class="btn btn-primary">
+                  <button type="button" className="btn btn-primary">
                     Save changes
                   </button>
                 </div>
@@ -363,7 +363,7 @@ function Profile() {
           <div className="patients">
             <div className="row">
               <div className="col-sm-3">Pateint 1</div>
-              <div className="col-sm-3">Pateint1 id</div>
+              <div className="col-sm-3">6789</div>
               <div className="col-sm-3">
                 <a href="/upload" className="linkclr">
                   <u>Upload EEG</u>
@@ -375,15 +375,15 @@ function Profile() {
                 </a>
               </div>
               <div className="col-sm-1">
-                <button class="btnn">
-                  <i class="fa fa-trash"></i>
+                <button className="btnn">
+                  <i className="fa fa-trash"></i>
                 </button>
               </div>
             </div>
             <hr />
             <div className="row">
               <div className="col-sm-3">Pateint 2</div>
-              <div className="col-sm-3 ">Pateint2 id</div>
+              <div className="col-sm-3 ">4567</div>
               <div className="col-sm-3">
                 <a href="/upload" className="linkclr">
                   <u>Upload EEG</u>
@@ -395,8 +395,8 @@ function Profile() {
                 </a>
               </div>
               <div className="col-sm-1">
-                <button class="btnn">
-                  <i class="fa fa-trash"></i>
+                <button className="btnn">
+                  <i className="fa fa-trash"></i>
                 </button>
               </div>
             </div>

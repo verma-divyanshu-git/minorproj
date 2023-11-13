@@ -28,7 +28,7 @@ const Upload = () => {
     delete formstate.file;
     data.append("data", JSON.stringify(formstate));
     axios
-      .post("http://localhost:5000/api", data, {
+      .post("http://localhost:8000/api", data, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -49,16 +49,16 @@ const Upload = () => {
   };
 
   return (
-    <div class="Upload">
-      <p class="head">Upload EEG Signals</p>
-      <div class="uform">
+    <div className="Upload">
+      <p className="head">Upload EEG Signals</p>
+      <div className="uform">
         <form onSubmit={handler}>
-          <div class="row">
-            <div class="col-sm-6 left">
-              <div class="form-group form-group mb-3">
+          <div className="row">
+            <div className="col-sm-6 left">
+              <div className="form-group form-group mb-3">
                 <label>Doctor ID</label>
                 <input
-                  class="form-control"
+                  className="form-control"
                   type="text"
                   name="doctor_id"
                   placeholder="Enter Doctor ID"
@@ -79,15 +79,15 @@ const Upload = () => {
               </div>
             </div>
 
-            <div class="col-sm-6 right">
+            <div className="col-sm-6 right">
               <div
-                class="form-group form-group mb-3"
+                className="form-group form-group mb-3"
                 controlId="formPlaintextPassword"
               >
                 <label>Date of recording EEG</label>
 
                 <input
-                  class="form-control"
+                  className="form-control"
                   type="date"
                   name="date"
                   placeholder="dd/mm/yyyy"
@@ -109,13 +109,13 @@ const Upload = () => {
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-sm-6 left">
-              <div class="form-group mb-3" controlId="formPlaintextPassword">
+          <div className="row">
+            <div className="col-sm-6 left">
+              <div className="form-group mb-3" controlId="formPlaintextPassword">
                 <label>Patient ID</label>
 
                 <input
-                  class="form-control"
+                  className="form-control"
                   type="text"
                   name="patient_id"
                   placeholder="Enter patient ID"
@@ -136,12 +136,13 @@ const Upload = () => {
               </div>
             </div>
         
-            <div class="col-sm-6 right">
-              <div class="form-group mb-3" controlId="formPlaintextPassword">
+            <div className="col-sm-6 right">
+              <div className="form-group mb-3" controlId="formPlaintextPassword">
                 <label>Recording Type</label>
                 <select
                   name="type"
                   placeholder="Select"
+                  value={formstate.role}
                   onChange={(e) =>
                     dispatchState({
                       type: "UPDATE",
@@ -155,7 +156,7 @@ const Upload = () => {
                     });
                   }}
                 >
-                  <option value="" disabled selected>
+                  <option value="" disabled>
                     Select
                   </option>
                   <option value="Eyes Closed">Eyes Closed</option>
@@ -166,12 +167,12 @@ const Upload = () => {
               </div>
             </div>
          </div>
-          <div class="row">
-            <div class="col-sm-6 left">
-              <div controlId="formFile" class="mb-3 ">
+          <div className="row">
+            <div className="col-sm-6 left">
+              <div controlId="formFile" className="mb-3 ">
                 <label>Upload recording</label>
                 <input
-                  class="form-control"
+                  className="form-control"
                   type="file"
                   name="file"
                   // value={formstate.file}
@@ -191,10 +192,10 @@ const Upload = () => {
                 <Error error={errors.file} />
               </div>
             </div>
-            <div class="col-sm-6 ">
-              <div class="btt">
+            <div className="col-sm-6 ">
+              <div className="btt">
                 <button
-                  class="btn btn-primary"
+                  className="btn btn-primary"
                   type="submit"
                   // onClick={(e) => {
                   //   const errors_present =

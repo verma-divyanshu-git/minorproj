@@ -9,6 +9,11 @@ const defaultState = {
   username: "",
 };
 
+const handleSubmit = (event) => {
+  event.preventDefault(); // Prevent the default form submission
+};
+
+
 const toggleForm = () => {
   const container = document.querySelector(".container");
   container.classList.toggle("active");
@@ -21,18 +26,18 @@ function Forgot() {
   return (
     <div className="App">
       <section>
-        <div class="container">
-          <div class="user signinBx">
-            <div class="imgBx">
+        <div className="container">
+          <div className="user signinBx">
+            <div className="imgBx">
               <img
                 src="https://www.statnews.com/wp-content/uploads/2020/01/AdobeStock_215322148-645x645.jpg"
                 alt=""
               />
             </div>
-            <div class="formBx">
-              <form action="" onsubmit="return false;" autocomplete="on">
+            <div className="formBx">
+              <form action="" onSubmit={handleSubmit} autoComplete="on">
                 <h2>Forgot Password?</h2>
-                <p class="signup">
+                <p className="signup">
                   Enter the email address associated with your account and we'll
                   send you a link to reset your password.
                 </p>
@@ -75,6 +80,7 @@ function Forgot() {
                 <select
                   id="role"
                   name="role"
+                  value={formstate.role}
                   placeholder="Select your Role"
                   onChange={(e) =>
                     dispatchState({
@@ -89,7 +95,7 @@ function Forgot() {
                     });
                   }}
                 >
-                  <option value="" disabled selected>
+                  <option value="" disabled>
                     Select your Role
                   </option>
                   <option value="Doctor">Doctor</option>
@@ -100,10 +106,10 @@ function Forgot() {
                 <button type="submit" className="btn btn-primary">
                   Continue
                 </button>
-                <p class="signup">
-                  Don't have an account ?
+                <p className="signup">
+                  Don't have an account ? 
                   <a href="/signup" onClick={toggleForm}>
-                    Sign Up.
+                     Sign Up.
                   </a>
                 </p>
               </form>

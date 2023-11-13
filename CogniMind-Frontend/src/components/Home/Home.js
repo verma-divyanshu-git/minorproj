@@ -21,7 +21,7 @@ function Home() {
                 <p className="textt"> We firmly believe that extending access to dependable, swift, and efficient depression diagnosis can profoundly benefit humanity's well-being.</p>
               </div>
               <div className="col-sm-4">
-                <img src={hand} className="img1" />
+                <img src={hand} className="img1" alt=""/>
               </div>
 
             </div>
@@ -30,7 +30,7 @@ function Home() {
             <div className="row">
 
               <div className="col-sm-5">
-                <img src={neuro} className="img2" />
+                <img src={neuro} className="img2" alt="" />
               </div>
               <div className="col-sm-7">
 
@@ -52,7 +52,7 @@ function Home() {
                 </div>
               </div>
               <div className="col-sm-3">
-                <img src={doc} className="img2" />
+                <img src={doc} className="img2" alt="" />
               </div>
 
 
@@ -62,7 +62,7 @@ function Home() {
             <div className="row">
 
               <div className="col-sm-5">
-                <img src={patient} className="img4" />
+                <img src={patient} className="img4" alt="" />
               </div>
 
               <div className="col-sm-7">
